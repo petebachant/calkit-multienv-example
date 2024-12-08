@@ -1,0 +1,16 @@
+stages:
+  my-conda-command:
+    cmd: >
+      mkdir -p results &&
+      calkit runenv -n conda --verbose --
+      "which python > results/conda.txt"
+    outs:
+      - results/conda.txt:
+          cache: false
+  my-pixi-command:
+    cmd: >
+      calkit runenv -n main --verbose --
+      "which python > results/pixi.txt"
+    outs:
+      - results/pixi.txt:
+          cache: false
