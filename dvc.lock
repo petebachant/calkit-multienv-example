@@ -1,17 +1,23 @@
 schema: '2.0'
 stages:
   my-conda-command:
-    cmd: "mkdir -p results && calkit runenv -n conda --verbose -- \"which python >
-      results/conda.txt\"\n"
+    cmd: "mkdir -p results && calkit runenv -n conda -- which python > results/conda.txt\n"
     outs:
     - path: results/conda.txt
       hash: md5
-      md5: 02549e993c0dce738f190f33682ef8be
-      size: 60
+      md5: ba68667f43f7934f8bfca77e62df41ce
+      size: 61
   my-pixi-command:
-    cmd: "calkit runenv -n main --verbose -- \"which python > results/pixi.txt\"\n"
+    cmd: "calkit runenv -n main -- which python > results/pixi.txt\n"
     outs:
     - path: results/pixi.txt
       hash: md5
       md5: a6e80596be586c3f9b2888b14b21b1ef
       size: 71
+  my-docker-command:
+    cmd: "calkit runenv -n ubuntu -- cat /etc/lsb-release > results/ubuntu.txt\n"
+    outs:
+    - path: results/ubuntu.txt
+      hash: md5
+      md5: 9f23c49c53829beec620e91117637bc0
+      size: 108
