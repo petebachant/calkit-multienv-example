@@ -1,0 +1,15 @@
+environments:
+  main:
+    kind: pixi
+    path: pixi.toml
+    default: true
+  conda:
+    kind: conda
+    path: environment.yml
+  ubuntu:
+    kind: docker
+    image: ubuntu
+dependencies:
+  - pixi
+  - docker
+  - conda
