@@ -1,5 +1,4 @@
 dependencies:
   - python
-  - pip
   - numpy
 name: calkit-multienv-test
