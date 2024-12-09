@@ -9,7 +9,9 @@ calkit run
 
 This will run multiple different commands,
 all in their own environment.
-One will use Pixi, another will use Conda, and another Docker.
+One will use Pixi, another will use Conda, another uv,
+another a uv venv (rather than project,)
+another an alternative Pixi environment, and another Docker.
 
 ## Why would I ever want to do this?
 
