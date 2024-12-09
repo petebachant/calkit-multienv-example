@@ -20,3 +20,4 @@ dependencies:
   - pixi
   - docker
   - conda
+  - uv
