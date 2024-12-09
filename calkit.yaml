@@ -16,6 +16,10 @@ environments:
     kind: uv-venv
     path: requirements.txt
     prefix: .venv2
+  pixi2:
+    kind: pixi
+    path: pixi.toml
+    name: pixi2
 dependencies:
   - pixi
   - docker

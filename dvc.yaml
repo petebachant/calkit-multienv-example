@@ -42,3 +42,12 @@ stages:
     outs:
       - results/uv-venv.txt:
           cache: false
+  my-pixi-env-command:
+    cmd: >
+      calkit runenv -n pixi2 --
+      python -c "import plotly; print(plotly.__file__)" > results/pixi2.txt
+    deps:
+      - pixi.toml
+    outs:
+      - results/pixi2.txt:
+          cache: false

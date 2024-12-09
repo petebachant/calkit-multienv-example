@@ -22,3 +22,9 @@ polars = ">=1.16.0,<2"
 
 [pypi-dependencies]
 calkit-python = "*"
+
+[environments]
+pixi2 = {features = ["plotting"]}
+
+[feature.plotting.dependencies]
+plotly = "*"

@@ -17,8 +17,8 @@ stages:
     deps:
     - path: pixi.toml
       hash: md5
-      md5: 88159893478c663bb6459b09a1266f00
-      size: 488
+      md5: 9f45ca6506742a949523a255ebf225ca
+      size: 584
     outs:
     - path: results/pixi.txt
       hash: md5
@@ -55,3 +55,16 @@ stages:
       hash: md5
       md5: b2173e6c24934eeb1aa991ebfb6e9d50
       size: 59
+  my-pixi-env-command:
+    cmd: "calkit runenv -n pixi2 -- python -c \"import plotly; print(plotly.__file__)\"\
+      \ > results/pixi2.txt\n"
+    deps:
+    - path: pixi.toml
+      hash: md5
+      md5: 9f45ca6506742a949523a255ebf225ca
+      size: 584
+    outs:
+    - path: results/pixi2.txt
+      hash: md5
+      md5: 92bee7038d83505cec5d65d2c42ba413
+      size: 106
