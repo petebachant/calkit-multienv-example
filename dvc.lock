@@ -69,7 +69,7 @@ stages:
       md5: 92bee7038d83505cec5d65d2c42ba413
       size: 106
   my-openfoam-command:
-    cmd: "calkit runenv -n openfoam --check -- icoFoam -help > results/openfoam.txt\n"
+    cmd: "calkit runenv -n openfoam -- icoFoam -help > results/openfoam.txt\n"
     deps:
     - path: Dockerfile
       hash: md5

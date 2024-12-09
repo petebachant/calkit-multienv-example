@@ -53,7 +53,7 @@ stages:
           cache: false
   my-openfoam-command:
     cmd: >
-      calkit runenv -n openfoam --check --
+      calkit runenv -n openfoam --
       icoFoam -help > results/openfoam.txt
     deps:
       - Dockerfile
