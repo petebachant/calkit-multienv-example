@@ -20,6 +20,15 @@ environments:
     kind: pixi
     path: pixi.toml
     name: pixi2
+  openfoam:
+    kind: docker
+    image: openfoam-2406-foampy
+    wdir: /work
+    path: Dockerfile
+    description: OpenFOAM v2406 with foamPy.
+    layers:
+      - mambaforge
+      - foampy
 dependencies:
   - pixi
   - docker
