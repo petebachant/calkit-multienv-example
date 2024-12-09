@@ -12,6 +12,7 @@ all in their own environment.
 One will use Pixi, another will use Conda, another uv,
 another a uv venv (rather than project,)
 another an alternative Pixi environment, and another Docker.
+See `dvc.yaml` for details.
 
 ## Why would I ever want to do this?
 
