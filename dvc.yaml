@@ -1,7 +1,7 @@
 stages:
   my-conda-command:
     cmd: >
-      calkit runenv -n conda --check --
+      calkit runenv -n conda --
       which python > results/conda.txt
     deps:
       - environment.yml
@@ -10,7 +10,7 @@ stages:
           cache: false
   my-pixi-command:
     cmd: >
-      calkit runenv -n main --check --
+      calkit runenv -n main --
       which python > results/pixi.txt
     deps:
       - pixi.toml
@@ -35,7 +35,7 @@ stages:
           cache: false
   my-uv-venv-command:
     cmd: >
-      calkit runenv -n uv-venv --check --
+      calkit runenv -n uv-venv --
       which python > results/uv-venv.txt
     deps:
       - requirements.txt
