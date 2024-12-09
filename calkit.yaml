@@ -23,12 +23,7 @@ environments:
   openfoam:
     kind: docker
     image: openfoam-v2406-foampy
-    wdir: /work
     path: Dockerfile
-    description: OpenFOAM v2406 with foamPy.
-    layers:
-      - mambaforge
-      - foampy
 dependencies:
   - calkit
   - pixi
