@@ -30,6 +30,7 @@ environments:
       - mambaforge
       - foampy
 dependencies:
+  - calkit
   - pixi
   - docker
   - conda
