@@ -1,7 +1,12 @@
 schema: '2.0'
 stages:
   my-conda-command:
-    cmd: "mkdir -p results && calkit runenv -n conda -- which python > results/conda.txt\n"
+    cmd: "calkit runenv -n conda -- which python > results/conda.txt\n"
+    deps:
+    - path: environment.yml
+      hash: md5
+      md5: d6a603cbb6f781c428dfe2546e5fbf68
+      size: 62
     outs:
     - path: results/conda.txt
       hash: md5
@@ -9,6 +14,11 @@ stages:
       size: 61
   my-pixi-command:
     cmd: "calkit runenv -n main -- which python > results/pixi.txt\n"
+    deps:
+    - path: pixi.toml
+      hash: md5
+      md5: 88159893478c663bb6459b09a1266f00
+      size: 488
     outs:
     - path: results/pixi.txt
       hash: md5
@@ -21,3 +31,27 @@ stages:
       hash: md5
       md5: 9f23c49c53829beec620e91117637bc0
       size: 108
+  my-uv-command:
+    cmd: "calkit runenv -n my-uv -- which python > results/uv.txt\n"
+    deps:
+    - path: pyproject.toml
+      hash: md5
+      md5: 6f62bf3365a1d6be0bfefac310ba3fd1
+      size: 219
+    outs:
+    - path: results/uv.txt
+      hash: md5
+      md5: 9495b96afdb4540e08bc254151d09ff3
+      size: 58
+  my-uv-venv-command:
+    cmd: "calkit runenv -n uv-venv -- which python > results/uv-venv.txt\n"
+    deps:
+    - path: requirements.txt
+      hash: md5
+      md5: 5be423b6bcbed3746d16c4807175a7f8
+      size: 19
+    outs:
+    - path: results/uv-venv.txt
+      hash: md5
+      md5: b2173e6c24934eeb1aa991ebfb6e9d50
+      size: 59

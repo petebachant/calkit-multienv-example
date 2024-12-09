@@ -3,6 +3,8 @@ stages:
     cmd: >
       calkit runenv -n conda --
       which python > results/conda.txt
+    deps:
+      - environment.yml
     outs:
       - results/conda.txt:
           cache: false
@@ -10,6 +12,8 @@ stages:
     cmd: >
       calkit runenv -n main --
       which python > results/pixi.txt
+    deps:
+      - pixi.toml
     outs:
       - results/pixi.txt:
           cache: false
@@ -19,4 +23,22 @@ stages:
       cat /etc/lsb-release > results/ubuntu.txt
     outs:
       - results/ubuntu.txt:
+          cache: false
+  my-uv-command:
+    cmd: >
+      calkit runenv -n my-uv --
+      which python > results/uv.txt
+    deps:
+      - pyproject.toml
+    outs:
+      - results/uv.txt:
+          cache: false
+  my-uv-venv-command:
+    cmd: >
+      calkit runenv -n uv-venv --
+      which python > results/uv-venv.txt
+    deps:
+      - requirements.txt
+    outs:
+      - results/uv-venv.txt:
           cache: false

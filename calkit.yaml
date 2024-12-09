@@ -9,6 +9,13 @@ environments:
   ubuntu:
     kind: docker
     image: ubuntu
+  my-uv:
+    kind: uv
+    path: pyproject.toml
+  uv-venv:
+    kind: uv-venv
+    path: requirements.txt
+    prefix: .venv2
 dependencies:
   - pixi
   - docker
