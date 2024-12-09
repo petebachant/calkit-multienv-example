@@ -22,7 +22,7 @@ environments:
     name: pixi2
   openfoam:
     kind: docker
-    image: openfoam-2406-foampy
+    image: openfoam-v2406-foampy
     wdir: /work
     path: Dockerfile
     description: OpenFOAM v2406 with foamPy.

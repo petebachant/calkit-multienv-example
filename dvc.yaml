@@ -51,3 +51,12 @@ stages:
     outs:
       - results/pixi2.txt:
           cache: false
+  my-openfoam-command:
+    cmd: >
+      calkit runenv -n openfoam --check --
+      icoFoam -help > results/openfoam.txt
+    deps:
+      - Dockerfile
+    outs:
+      - results/openfoam.txt:
+          cache: false
