@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   my-conda-command:
-    cmd: "calkit runenv -n conda -- which python > results/conda.txt\n"
+    cmd: "calkit xenv -n conda -- which python > results/conda.txt\n"
     deps:
     - path: environment.yml
       hash: md5
@@ -13,7 +13,7 @@ stages:
       md5: ba68667f43f7934f8bfca77e62df41ce
       size: 61
   my-pixi-command:
-    cmd: "calkit runenv -n main -- which python > results/pixi.txt\n"
+    cmd: "calkit xenv -n main -- which python > results/pixi.txt\n"
     deps:
     - path: pixi.toml
       hash: md5
@@ -22,17 +22,17 @@ stages:
     outs:
     - path: results/pixi.txt
       hash: md5
-      md5: a6e80596be586c3f9b2888b14b21b1ef
-      size: 71
+      md5: e15f73a349d94f47fd9db1193448f2a7
+      size: 73
   my-docker-command:
-    cmd: "calkit runenv -n ubuntu -- cat /etc/lsb-release > results/ubuntu.txt\n"
+    cmd: "calkit xenv -n ubuntu -- cat /etc/lsb-release > results/ubuntu.txt\n"
     outs:
     - path: results/ubuntu.txt
       hash: md5
       md5: 9f23c49c53829beec620e91117637bc0
       size: 108
   my-uv-command:
-    cmd: "calkit runenv -n my-uv -- which python > results/uv.txt\n"
+    cmd: "calkit xenv -n my-uv -- which python > results/uv.txt\n"
     deps:
     - path: pyproject.toml
       hash: md5
@@ -41,10 +41,10 @@ stages:
     outs:
     - path: results/uv.txt
       hash: md5
-      md5: 9495b96afdb4540e08bc254151d09ff3
-      size: 58
+      md5: ef28234db10497d69c8bc9d52c470e7e
+      size: 60
   my-uv-venv-command:
-    cmd: "calkit runenv -n uv-venv -- which python > results/uv-venv.txt\n"
+    cmd: "calkit xenv -n uv-venv -- which python > results/uv-venv.txt\n"
     deps:
     - path: requirements.txt
       hash: md5
@@ -53,10 +53,10 @@ stages:
     outs:
     - path: results/uv-venv.txt
       hash: md5
-      md5: b2173e6c24934eeb1aa991ebfb6e9d50
-      size: 59
+      md5: 90da20b506002b890e90e70e8c23eaaf
+      size: 61
   my-pixi-env-command:
-    cmd: "calkit runenv -n pixi2 -- python -c \"import plotly; print(plotly.__file__)\"\
+    cmd: "calkit xenv -n pixi2 -- python -c \"import plotly; print(plotly.__file__)\"\
       \ > results/pixi2.txt\n"
     deps:
     - path: pixi.toml
@@ -66,10 +66,10 @@ stages:
     outs:
     - path: results/pixi2.txt
       hash: md5
-      md5: 92bee7038d83505cec5d65d2c42ba413
-      size: 106
+      md5: 0b50c4b42ff6b57b070d2a8fdcff73e7
+      size: 108
   my-openfoam-command:
-    cmd: "calkit runenv -n openfoam -- icoFoam -help > results/openfoam.txt\n"
+    cmd: "calkit xenv -n openfoam -- icoFoam -help > results/openfoam.txt\n"
     deps:
     - path: Dockerfile
       hash: md5

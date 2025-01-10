@@ -1,7 +1,7 @@
 stages:
   my-conda-command:
     cmd: >
-      calkit runenv -n conda --
+      calkit xenv -n conda --
       which python > results/conda.txt
     deps:
       - environment.yml
@@ -10,7 +10,7 @@ stages:
           cache: false
   my-pixi-command:
     cmd: >
-      calkit runenv -n main --
+      calkit xenv -n main --
       which python > results/pixi.txt
     deps:
       - pixi.toml
@@ -19,14 +19,14 @@ stages:
           cache: false
   my-docker-command:
     cmd: >
-      calkit runenv -n ubuntu --
+      calkit xenv -n ubuntu --
       cat /etc/lsb-release > results/ubuntu.txt
     outs:
       - results/ubuntu.txt:
           cache: false
   my-uv-command:
     cmd: >
-      calkit runenv -n my-uv --
+      calkit xenv -n my-uv --
       which python > results/uv.txt
     deps:
       - pyproject.toml
@@ -35,7 +35,7 @@ stages:
           cache: false
   my-uv-venv-command:
     cmd: >
-      calkit runenv -n uv-venv --
+      calkit xenv -n uv-venv --
       which python > results/uv-venv.txt
     deps:
       - requirements.txt
@@ -44,7 +44,7 @@ stages:
           cache: false
   my-pixi-env-command:
     cmd: >
-      calkit runenv -n pixi2 --
+      calkit xenv -n pixi2 --
       python -c "import plotly; print(plotly.__file__)" > results/pixi2.txt
     deps:
       - pixi.toml
@@ -53,7 +53,7 @@ stages:
           cache: false
   my-openfoam-command:
     cmd: >
-      calkit runenv -n openfoam --
+      calkit xenv -n openfoam --
       icoFoam -help > results/openfoam.txt
     deps:
       - Dockerfile

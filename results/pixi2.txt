@@ -1,1 +1,1 @@
-/Users/pete/temp/calkit-multienv-example/.pixi/envs/pixi2/lib/python3.12/site-packages/plotly/__init__.py
+/Users/pete/calkit/calkit-multienv-example/.pixi/envs/pixi2/lib/python3.12/site-packages/plotly/__init__.py
