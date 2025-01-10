@@ -17,13 +17,13 @@ stages:
     deps:
     - path: pixi.toml
       hash: md5
-      md5: 9f45ca6506742a949523a255ebf225ca
-      size: 584
+      md5: 6f26f56b13dc9358aa77acac578c1995
+      size: 448
     outs:
     - path: results/pixi.txt
       hash: md5
-      md5: e15f73a349d94f47fd9db1193448f2a7
-      size: 73
+      md5: 4945c83638415f6a389874041536bf5c
+      size: 70
   my-docker-command:
     cmd: "calkit xenv -n ubuntu -- cat /etc/lsb-release > results/ubuntu.txt\n"
     outs:
@@ -61,12 +61,12 @@ stages:
     deps:
     - path: pixi.toml
       hash: md5
-      md5: 9f45ca6506742a949523a255ebf225ca
-      size: 584
+      md5: 6f26f56b13dc9358aa77acac578c1995
+      size: 448
     outs:
     - path: results/pixi2.txt
       hash: md5
-      md5: 0b50c4b42ff6b57b070d2a8fdcff73e7
+      md5: 54ea9d10c772ddf61ca70bd6c8f0bcba
       size: 108
   my-openfoam-command:
     cmd: "calkit xenv -n openfoam -- icoFoam -help > results/openfoam.txt\n"

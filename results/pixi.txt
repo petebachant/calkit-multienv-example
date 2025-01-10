@@ -1,1 +1,1 @@
-/Users/pete/calkit/calkit-multienv-example/.pixi/envs/default/bin/python
+/Users/pete/calkit/calkit-multienv-example/.pixi/envs/main/bin/python
