@@ -14,5 +14,9 @@ version = "0.1.0"
 pandas = "*"
 polars = "*"
 
+[feature.pixi2.dependencies]
+plotly = "*"
+
 [environments]
 main = ["main"]
+pixi2 = ["pixi2"]
