@@ -80,3 +80,16 @@ stages:
       hash: md5
       md5: 3360aa7f6741a00d1923a9536d1702e9
       size: 771
+  my-venv-command:
+    cmd: "calkit xenv -n my-venv -- python -c \"import polars; print(polars.__version__)\"\
+      \ > results/venv.txt\n"
+    deps:
+    - path: reqs-venv.txt
+      hash: md5
+      md5: 4d1e252c899d43562a7f13d42d405b60
+      size: 15
+    outs:
+    - path: results/venv.txt
+      hash: md5
+      md5: eee74d81a30afe6f6f417df07ae0fc4b
+      size: 7

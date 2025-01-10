@@ -60,3 +60,12 @@ stages:
     outs:
       - results/openfoam.txt:
           cache: false
+  my-venv-command:
+    cmd: >
+      calkit xenv -n my-venv --
+      python -c "import polars; print(polars.__version__)" > results/venv.txt
+    deps:
+      - reqs-venv.txt
+    outs:
+      - results/venv.txt:
+          cache: false

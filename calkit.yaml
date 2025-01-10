@@ -24,6 +24,10 @@ environments:
     kind: docker
     image: openfoam-v2406-foampy
     path: Dockerfile
+  my-venv:
+    kind: venv
+    path: reqs-venv.txt
+    prefix: .my-venv
 dependencies:
   - calkit
   - pixi
