@@ -3,7 +3,6 @@ environments:
     kind: pixi
     path: pixi.toml
     name: main
-    default: true
   conda:
     kind: conda
     path: environment.yml
