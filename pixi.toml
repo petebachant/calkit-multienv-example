@@ -10,12 +10,8 @@ version = "0.1.0"
 
 [dependencies]
 
-[feature.main.dependencies]
-python = "*"
-pandas = "*"
-polars = "*"
-marimo = "*"
-quarto = "*"
+[feature.pixi2.dependencies]
+pandas = "1.*"
 
 [environments]
-main = ["main"]
+pixi2 = ["pixi2"]
