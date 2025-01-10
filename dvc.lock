@@ -17,8 +17,8 @@ stages:
     deps:
     - path: pixi.toml
       hash: md5
-      md5: 6f26f56b13dc9358aa77acac578c1995
-      size: 448
+      md5: 1c866dc98a771051923c964f1c9c5ecb
+      size: 415
     outs:
     - path: results/pixi.txt
       hash: md5
@@ -61,12 +61,12 @@ stages:
     deps:
     - path: pixi.toml
       hash: md5
-      md5: 6f26f56b13dc9358aa77acac578c1995
-      size: 448
+      md5: 1c866dc98a771051923c964f1c9c5ecb
+      size: 415
     outs:
     - path: results/pixi2.txt
       hash: md5
-      md5: 54ea9d10c772ddf61ca70bd6c8f0bcba
+      md5: 74ab24f8f72932a60c3a2c772e112092
       size: 108
   my-openfoam-command:
     cmd: "calkit xenv -n openfoam -- icoFoam -help > results/openfoam.txt\n"
