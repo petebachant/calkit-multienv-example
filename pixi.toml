@@ -2,29 +2,20 @@
 authors = ["Pete Bachant <petebachant@gmail.com>"]
 channels = ["conda-forge"]
 description = "Add a short description here"
-name = "calkit-multienv-test"
-platforms = ["osx-arm64"]
+name = "calkit-multienv-example"
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
 version = "0.1.0"
 
 [tasks]
 
 [dependencies]
-python = "3.12.*"
-uv = ">=0"
-click = ">=8"
-jupyter = ">=1.1.1,<2"
-marimo = ">=0.9.32,<0.10"
-quarto = ">=1.5.57,<2"
-jupyterlab = ">=4.3.2,<5"
-pixi-kernel = ">=0.5.2,<0.6"
-pandas = ">=2.2.3,<3"
-polars = ">=1.16.0,<2"
 
-[pypi-dependencies]
-calkit-python = "*"
+[feature.main.dependencies]
+python = "*"
+pandas = "*"
+polars = "*"
+marimo = "*"
+quarto = "*"
 
 [environments]
-pixi2 = {features = ["plotting"]}
-
-[feature.plotting.dependencies]
-plotly = "*"
+main = ["main"]
