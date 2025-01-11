@@ -28,6 +28,10 @@ environments:
     kind: venv
     path: reqs-venv.txt
     prefix: .my-venv
+  foam:
+    kind: docker
+    image: microfluidica/openfoam:2412
+    wdir: /work
 dependencies:
   - calkit
   - pixi
