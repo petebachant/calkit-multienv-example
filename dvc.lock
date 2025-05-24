@@ -29,7 +29,7 @@ stages:
     outs:
     - path: results/ubuntu.txt
       hash: md5
-      md5: 9f23c49c53829beec620e91117637bc0
+      md5: 415b2b6e204f18f955a97744b62cc2b4
       size: 108
   my-uv-command:
     cmd: "calkit xenv -n my-uv -- which python > results/uv.txt\n"

@@ -24,10 +24,16 @@ environments:
     kind: docker
     image: openfoam-v2406-foampy
     path: Dockerfile
+    user: root
   my-venv:
     kind: venv
     path: reqs-venv.txt
     prefix: .my-venv
+  tf:
+    path: reqs-tf.txt
+    kind: uv-venv
+    prefix: .venv
+    python: "3.12"
 dependencies:
   - calkit
   - pixi
