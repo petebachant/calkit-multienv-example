@@ -1,90 +1,91 @@
 schema: '2.0'
 stages:
   my-conda-command:
-    cmd: "calkit xenv -n conda -- which python > results/conda.txt\n"
+    cmd: calkit xenv -n my-conda-env --no-check -- bash --noprofile --norc -c "which
+      python > results/conda.txt"
     deps:
-    - path: environment.yml
+    - path: .calkit/env-locks/my-conda-env.yml
       hash: md5
-      md5: d6a603cbb6f781c428dfe2546e5fbf68
-      size: 62
+      md5: ebc232ac884fe872d1528d38da35045f
+      size: 874
     outs:
     - path: results/conda.txt
       hash: md5
-      md5: ba68667f43f7934f8bfca77e62df41ce
-      size: 61
+      md5: 02549e993c0dce738f190f33682ef8be
+      size: 60
   my-pixi-command:
-    cmd: "calkit xenv -n main -- which python > results/pixi.txt\n"
-    deps:
-    - path: pixi.toml
-      hash: md5
-      md5: 1c866dc98a771051923c964f1c9c5ecb
-      size: 415
+    cmd: calkit xenv -n main --no-check -- bash --noprofile --norc -c "which python
+      > results/pixi.txt"
     outs:
     - path: results/pixi.txt
       hash: md5
       md5: 4945c83638415f6a389874041536bf5c
       size: 70
   my-docker-command:
-    cmd: "calkit xenv -n ubuntu -- cat /etc/lsb-release > results/ubuntu.txt\n"
+    cmd: calkit xenv -n ubuntu --no-check -- bash --noprofile --norc -c "cat /etc/lsb-release
+      > results/ubuntu.txt"
+    deps:
+    - path: .calkit/env-locks/ubuntu.json
+      hash: md5
+      md5: 6f820f3d52a5270e89d541e856ff6b01
+      size: 333
     outs:
     - path: results/ubuntu.txt
       hash: md5
-      md5: 415b2b6e204f18f955a97744b62cc2b4
-      size: 108
+      md5: 1a1457514d2bc9c4991f1a22ab015fd3
+      size: 104
   my-uv-command:
-    cmd: "calkit xenv -n my-uv -- which python > results/uv.txt\n"
+    cmd: calkit xenv -n my-uv --no-check -- bash --noprofile --norc -c "which python
+      > results/uv.txt"
     deps:
-    - path: pyproject.toml
+    - path: uv.lock
       hash: md5
-      md5: 0d0945d23174f8f3ebc82910acfdc065
-      size: 264
+      md5: 1cb2aad274792795a6c2cdf2cd271401
+      size: 292237
     outs:
     - path: results/uv.txt
       hash: md5
       md5: ef28234db10497d69c8bc9d52c470e7e
       size: 60
   my-uv-venv-command:
-    cmd: "calkit xenv -n uv-venv -- which python > results/uv-venv.txt\n"
+    cmd: calkit xenv -n uv-venv --no-check -- bash --noprofile --norc -c "which python
+      > results/uv-venv.txt"
     deps:
-    - path: requirements.txt
+    - path: .calkit/env-locks/uv-venv.txt
       hash: md5
-      md5: 5be423b6bcbed3746d16c4807175a7f8
-      size: 19
+      md5: 569002c7f03bf600b2ca5c4d3165cc53
+      size: 143
     outs:
     - path: results/uv-venv.txt
       hash: md5
       md5: 90da20b506002b890e90e70e8c23eaaf
       size: 61
   my-pixi-env-command:
-    cmd: "calkit xenv -n pixi2 -- python -c \"import plotly; print(plotly.__file__)\"\
-      \ > results/pixi2.txt\n"
-    deps:
-    - path: pixi.toml
-      hash: md5
-      md5: 1c866dc98a771051923c964f1c9c5ecb
-      size: 415
+    cmd: calkit xenv -n pixi2 --no-check -- bash --noprofile --norc -c "python -c
+      \"import plotly; print(plotly.__file__)\" > results/pixi2.txt"
     outs:
     - path: results/pixi2.txt
       hash: md5
       md5: 74ab24f8f72932a60c3a2c772e112092
       size: 108
   my-openfoam-command:
-    cmd: "calkit xenv -n openfoam -- icoFoam -help > results/openfoam.txt\n"
+    cmd: calkit xenv -n openfoam --no-check -- bash --noprofile --norc -c "icoFoam
+      -help > results/openfoam.txt"
     deps:
-    - path: Dockerfile
+    - path: .calkit/env-locks/openfoam.json
       hash: md5
-      md5: 8ea8bad904dccccc38ee0f7e3db36f7e
-      size: 2085
+      md5: 12bd445898ca8bdb021a1fd295ae2b59
+      size: 1336
     outs:
     - path: results/openfoam.txt
       hash: md5
-      md5: 3360aa7f6741a00d1923a9536d1702e9
-      size: 771
+      md5: f76805afd7642ed0fa0b977ab3f32ce7
+      size: 766
   my-venv-command:
-    cmd: "calkit xenv -n my-venv -- python -c \"import polars; print(polars.__version__)\"\
-      \ > results/venv.txt\n"
+    cmd: calkit xenv -n my-venv --no-check -- bash --noprofile --norc -c "python -c
+      \"import polars; print(polars.__version__)\" > results/venv.txt"
     deps:
-    - path: reqs-venv.txt
+    - path: .calkit/env-locks/my-venv.txt
       hash: md5
       md5: 4d1e252c899d43562a7f13d42d405b60
       size: 15
@@ -93,3 +94,82 @@ stages:
       hash: md5
       md5: eee74d81a30afe6f6f417df07ae0fc4b
       size: 7
+  _check-env-my-conda-env:
+    cmd: calkit check environment --name my-conda-env
+    deps:
+    - path: environment.yml
+      hash: md5
+      md5: d6a603cbb6f781c428dfe2546e5fbf68
+      size: 62
+    outs:
+    - path: .calkit/env-locks/my-conda-env.yml
+      hash: md5
+      md5: ebc232ac884fe872d1528d38da35045f
+      size: 874
+  _check-env-ubuntu:
+    cmd: calkit check environment --name ubuntu
+    outs:
+    - path: .calkit/env-locks/ubuntu.json
+      hash: md5
+      md5: 6f820f3d52a5270e89d541e856ff6b01
+      size: 333
+  _check-env-my-uv:
+    cmd: calkit check environment --name my-uv
+    deps:
+    - path: pyproject.toml
+      hash: md5
+      md5: 0d0945d23174f8f3ebc82910acfdc065
+      size: 264
+    outs:
+    - path: uv.lock
+      hash: md5
+      md5: 1cb2aad274792795a6c2cdf2cd271401
+      size: 292237
+  _check-env-uv-venv:
+    cmd: calkit check environment --name uv-venv
+    deps:
+    - path: requirements.txt
+      hash: md5
+      md5: 5be423b6bcbed3746d16c4807175a7f8
+      size: 19
+    outs:
+    - path: .calkit/env-locks/uv-venv.txt
+      hash: md5
+      md5: 569002c7f03bf600b2ca5c4d3165cc53
+      size: 143
+  _check-env-openfoam:
+    cmd: calkit check environment --name openfoam
+    deps:
+    - path: Dockerfile
+      hash: md5
+      md5: 8ea8bad904dccccc38ee0f7e3db36f7e
+      size: 2085
+    outs:
+    - path: .calkit/env-locks/openfoam.json
+      hash: md5
+      md5: 12bd445898ca8bdb021a1fd295ae2b59
+      size: 1336
+  _check-env-my-venv:
+    cmd: calkit check environment --name my-venv
+    deps:
+    - path: reqs-venv.txt
+      hash: md5
+      md5: 4d1e252c899d43562a7f13d42d405b60
+      size: 15
+    outs:
+    - path: .calkit/env-locks/my-venv.txt
+      hash: md5
+      md5: 4d1e252c899d43562a7f13d42d405b60
+      size: 15
+  _check-env-tf:
+    cmd: calkit check environment --name tf
+    deps:
+    - path: reqs-tf.txt
+      hash: md5
+      md5: b24c1e97ea2d7d90283fa047cfff6b2a
+      size: 22
+    outs:
+    - path: .calkit/env-locks/tf.txt
+      hash: md5
+      md5: bba374e34d5267d26dc204d4b4bd36a3
+      size: 3911

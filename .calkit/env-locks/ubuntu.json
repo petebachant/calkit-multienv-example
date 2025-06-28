@@ -1,0 +1,16 @@
+{
+    "RepoTags": [
+        "ubuntu:latest"
+    ],
+    "Architecture": "arm64",
+    "Os": "linux",
+    "Size": 28861324,
+    "RootFS": {
+        "Type": "layers",
+        "Layers": [
+            "sha256:c2f2f00da4ebbfa69fd966cc712f4d400283f6ade9fcd8ebb4801dfae55f86f1"
+        ]
+    },
+    "DockerfileMD5": null,
+    "DepsMD5s": {}
+}

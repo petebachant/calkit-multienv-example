@@ -1,9 +1,15 @@
+dependencies:
+  - calkit
+  - pixi
+  - docker
+  - conda
+  - uv
 environments:
   main:
     kind: pixi
     path: pixi.toml
     name: main
-  conda:
+  my-conda-env:
     kind: conda
     path: environment.yml
   ubuntu:
@@ -34,9 +40,61 @@ environments:
     kind: uv-venv
     prefix: .venv
     python: "3.12"
-dependencies:
-  - calkit
-  - pixi
-  - docker
-  - conda
-  - uv
+pipeline:
+  stages:
+    my-conda-command:
+      kind: shell-command
+      command: which python > results/conda.txt
+      environment: my-conda-env
+      outputs:
+        - path: results/conda.txt
+          storage: git
+    my-pixi-command:
+      kind: shell-command
+      command: which python > results/pixi.txt
+      environment: main
+      outputs:
+        - path: results/pixi.txt
+          storage: git
+    my-docker-command:
+      kind: shell-command
+      command: cat /etc/lsb-release > results/ubuntu.txt
+      environment: ubuntu
+      outputs:
+        - path: results/ubuntu.txt
+          storage: git
+    my-uv-command:
+      kind: shell-command
+      command: which python > results/uv.txt
+      environment: my-uv
+      outputs:
+        - path: results/uv.txt
+          storage: git
+    my-uv-venv-command:
+      kind: shell-command
+      command: which python > results/uv-venv.txt
+      environment: uv-venv
+      outputs:
+        - path: results/uv-venv.txt
+          storage: git
+    my-pixi-env-command:
+      kind: shell-command
+      command: python -c \"import plotly; print(plotly.__file__)\" > results/pixi2.txt
+      environment: pixi2
+      outputs:
+        - path: results/pixi2.txt
+          storage: git
+    my-openfoam-command:
+      kind: shell-command
+      command: icoFoam -help > results/openfoam.txt
+      environment: openfoam
+      outputs:
+        - path: results/openfoam.txt
+          storage: git
+    my-venv-command:
+      kind: shell-command
+      command: python -c \"import polars; print(polars.__version__)\" > results/venv.txt
+      environment: my-venv
+      outputs:
+        - path: results/venv.txt
+          storage: git

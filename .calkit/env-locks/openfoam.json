@@ -1,0 +1,27 @@
+{
+    "RepoTags": [
+        "openfoam-v2406-foampy:latest"
+    ],
+    "Architecture": "arm64",
+    "Os": "linux",
+    "Size": 566775788,
+    "RootFS": {
+        "Type": "layers",
+        "Layers": [
+            "sha256:e03f520a17abd5b8603b7187bb5aec0eafe8972faf801eab0687f08c516d28e3",
+            "sha256:8fd84d32689b07bef8db99d6db9f152426cedc11ceb8020fd91eed9333a142af",
+            "sha256:a8731671cb89425c556ff2b34c5d278d293ffe8cb44fab3614db31760471a185",
+            "sha256:801c7b5b05311d6435a092fc647495f8e8784e48a6fa24514645295b756224dc",
+            "sha256:a28d31efdc7c4dd24273a4b474b63ae07ce02b34257a2b1e4d1be877242f1568",
+            "sha256:8fbb70ba4c853dafce432cff7d751501b9caa7aa1ad70361b4ec2905ad332771",
+            "sha256:c70558a8303fcea1103cd51d8a7465624755a7278c0347a5f223685969270cfd",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+            "sha256:72396ce5cd55fb7b456e7f3ce1cfb5802fe02d71c558de8081b9f1d572b3c20b",
+            "sha256:11955e86dee29b205f5ef056cbe9729dc6f90df3e8e499dbe40078150ef67b39",
+            "sha256:f936881e535eff6f1129cd33fd1da790426e48aab6a0d5f88cd3c015057011d0",
+            "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef"
+        ]
+    },
+    "DockerfileMD5": "8ea8bad904dccccc38ee0f7e3db36f7e",
+    "DepsMD5s": {}
+}
