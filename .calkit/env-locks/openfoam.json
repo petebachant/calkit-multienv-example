@@ -2,6 +2,9 @@
     "RepoTags": [
         "openfoam-v2406-foampy:latest"
     ],
+    "RepoDigests": [
+        "openfoam-v2406-foampy@sha256:aae032d8ab7bb2a6cbdd9e6c772990c0dc4f8a4c04ff7cca5e86d9d78cfa980b"
+    ],
     "Architecture": "arm64",
     "Os": "linux",
     "Size": 566775788,

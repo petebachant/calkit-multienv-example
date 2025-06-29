@@ -27,8 +27,8 @@ stages:
     deps:
     - path: .calkit/env-locks/ubuntu.json
       hash: md5
-      md5: 6f820f3d52a5270e89d541e856ff6b01
-      size: 333
+      md5: 4e92741fb5455e3ea5f9000a32ff40cc
+      size: 450
     outs:
     - path: results/ubuntu.txt
       hash: md5
@@ -74,8 +74,8 @@ stages:
     deps:
     - path: .calkit/env-locks/openfoam.json
       hash: md5
-      md5: 12bd445898ca8bdb021a1fd295ae2b59
-      size: 1336
+      md5: cd0a7b0b0da0635956501ec0a5c4a899
+      size: 1468
     outs:
     - path: results/openfoam.txt
       hash: md5
@@ -111,8 +111,8 @@ stages:
     outs:
     - path: .calkit/env-locks/ubuntu.json
       hash: md5
-      md5: 6f820f3d52a5270e89d541e856ff6b01
-      size: 333
+      md5: 4e92741fb5455e3ea5f9000a32ff40cc
+      size: 450
   _check-env-my-uv:
     cmd: calkit check environment --name my-uv
     deps:
@@ -147,8 +147,8 @@ stages:
     outs:
     - path: .calkit/env-locks/openfoam.json
       hash: md5
-      md5: 12bd445898ca8bdb021a1fd295ae2b59
-      size: 1336
+      md5: cd0a7b0b0da0635956501ec0a5c4a899
+      size: 1468
   _check-env-my-venv:
     cmd: calkit check environment --name my-venv
     deps:
