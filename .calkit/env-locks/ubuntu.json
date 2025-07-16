@@ -3,15 +3,15 @@
         "ubuntu:latest"
     ],
     "RepoDigests": [
-        "ubuntu@sha256:b59d21599a2b151e23eea5f6602f4af4d7d31c4e236d22bf0b62b86d2e386b8f"
+        "ubuntu@sha256:c4570d2f4665d5d118ae29fb494dee4f8db8fcfaee0e37a2e19b827f399070d3"
     ],
     "Architecture": "arm64",
     "Os": "linux",
-    "Size": 28861324,
+    "Size": 28869774,
     "RootFS": {
         "Type": "layers",
         "Layers": [
-            "sha256:c2f2f00da4ebbfa69fd966cc712f4d400283f6ade9fcd8ebb4801dfae55f86f1"
+            "sha256:f938656f385ef839075702193b749dad80f71362a3316b96702c58c070312e22"
         ]
     },
     "DockerfileMD5": null,

@@ -1,0 +1,20 @@
+2025-07-16 16:16:39,689 - INFO - Running stage '_check-env-my-conda-env':
+2025-07-16 16:16:39,690 - INFO - > calkit check environment --name my-conda-env
+2025-07-16 16:16:40,852 - INFO - Running stage '_check-env-ubuntu':
+2025-07-16 16:16:40,852 - INFO - > calkit check environment --name ubuntu
+2025-07-16 16:16:41,598 - INFO - Running stage '_check-env-my-uv':
+2025-07-16 16:16:41,599 - INFO - > calkit check environment --name my-uv
+2025-07-16 16:16:42,242 - INFO - Running stage '_check-env-uv-venv':
+2025-07-16 16:16:42,242 - INFO - > calkit check environment --name uv-venv
+2025-07-16 16:16:42,896 - INFO - Running stage '_check-env-openfoam':
+2025-07-16 16:16:42,896 - INFO - > calkit check environment --name openfoam
+2025-07-16 16:16:43,573 - INFO - Running stage '_check-env-my-venv':
+2025-07-16 16:16:43,573 - INFO - > calkit check environment --name my-venv
+2025-07-16 16:16:44,743 - INFO - Stage 'my-conda-command' didn't change, skipping
+2025-07-16 16:16:44,745 - INFO - Stage 'my-pixi-command' didn't change, skipping
+2025-07-16 16:16:44,748 - INFO - Stage 'my-docker-command' didn't change, skipping
+2025-07-16 16:16:44,751 - INFO - Stage 'my-uv-command' didn't change, skipping
+2025-07-16 16:16:44,753 - INFO - Stage 'my-uv-venv-command' didn't change, skipping
+2025-07-16 16:16:44,755 - INFO - Stage 'my-pixi-env-command' didn't change, skipping
+2025-07-16 16:16:44,758 - INFO - Stage 'my-openfoam-command' didn't change, skipping
+2025-07-16 16:16:44,760 - INFO - Stage 'my-venv-command' didn't change, skipping

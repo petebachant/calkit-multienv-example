@@ -1,0 +1,167 @@
+{
+  "id": "13f9f01eec3a4cf38d72eaec3f915a9e",
+  "system_id": "b2890a1644e28aecbd9762e4a1e124fe0b91f103",
+  "start_time": "2025-07-16T16:16:39.490667+00:00",
+  "end_time": "2025-07-16T16:16:44.952052+00:00",
+  "targets": [],
+  "force": false,
+  "dvc_args": [],
+  "status": "completed",
+  "stages": {
+    "_check-env-my-conda-env": {
+      "start_time": "2025-07-16T16:16:39.689000",
+      "end_time": "2025-07-16T16:16:40.852000",
+      "status": "completed"
+    },
+    "_check-env-ubuntu": {
+      "start_time": "2025-07-16T16:16:40.852000",
+      "end_time": "2025-07-16T16:16:41.598000",
+      "status": "completed"
+    },
+    "_check-env-my-uv": {
+      "start_time": "2025-07-16T16:16:41.598000",
+      "end_time": "2025-07-16T16:16:42.242000",
+      "status": "completed"
+    },
+    "_check-env-uv-venv": {
+      "start_time": "2025-07-16T16:16:42.242000",
+      "end_time": "2025-07-16T16:16:42.896000",
+      "status": "completed"
+    },
+    "_check-env-openfoam": {
+      "start_time": "2025-07-16T16:16:42.896000",
+      "end_time": "2025-07-16T16:16:43.573000",
+      "status": "completed"
+    },
+    "_check-env-my-venv": {
+      "start_time": "2025-07-16T16:16:43.573000",
+      "end_time": "2025-07-16T16:16:44.743000",
+      "status": "completed"
+    },
+    "my-conda-command": {
+      "start_time": "2025-07-16T16:16:44.743000",
+      "end_time": "2025-07-16T16:16:44.743000",
+      "status": "skipped"
+    },
+    "my-pixi-command": {
+      "start_time": "2025-07-16T16:16:44.745000",
+      "end_time": "2025-07-16T16:16:44.745000",
+      "status": "skipped"
+    },
+    "my-docker-command": {
+      "start_time": "2025-07-16T16:16:44.748000",
+      "end_time": "2025-07-16T16:16:44.748000",
+      "status": "skipped"
+    },
+    "my-uv-command": {
+      "start_time": "2025-07-16T16:16:44.751000",
+      "end_time": "2025-07-16T16:16:44.751000",
+      "status": "skipped"
+    },
+    "my-uv-venv-command": {
+      "start_time": "2025-07-16T16:16:44.753000",
+      "end_time": "2025-07-16T16:16:44.753000",
+      "status": "skipped"
+    },
+    "my-pixi-env-command": {
+      "start_time": "2025-07-16T16:16:44.755000",
+      "end_time": "2025-07-16T16:16:44.755000",
+      "status": "skipped"
+    },
+    "my-openfoam-command": {
+      "start_time": "2025-07-16T16:16:44.758000",
+      "end_time": "2025-07-16T16:16:44.758000",
+      "status": "skipped"
+    },
+    "my-venv-command": {
+      "start_time": "2025-07-16T16:16:44.760000",
+      "end_time": "2025-07-16T16:16:44.760000",
+      "status": "skipped"
+    }
+  },
+  "git_rev": "a3d101091ef1e5de5e59dc50cf07c6cdc1c3c517",
+  "git_branch": "main",
+  "git_changed_files_before": [
+    ".calkit/env-locks/openfoam.json",
+    ".calkit/env-locks/ubuntu.json",
+    "dvc.yaml"
+  ],
+  "git_staged_files_before": [
+    "dvc.lock"
+  ],
+  "git_untracked_files_before": [
+    ".calkit/logs/2025-07-16T16-12-09-8636b62c88e849068ac3f70ea15a2e5e.log",
+    ".calkit/runs/2025-07-16T16-12-09-8636b62c88e849068ac3f70ea15a2e5e.json",
+    ".calkit/systems/b2890a1644e28aecbd9762e4a1e124fe0b91f103.json"
+  ],
+  "git_changed_files_after": [
+    ".calkit/env-locks/openfoam.json",
+    ".calkit/env-locks/ubuntu.json",
+    "dvc.yaml"
+  ],
+  "git_staged_files_after": [
+    "dvc.lock"
+  ],
+  "git_untracked_files_after": [
+    ".calkit/logs/2025-07-16T16-12-09-8636b62c88e849068ac3f70ea15a2e5e.log",
+    ".calkit/logs/2025-07-16T16-16-39-13f9f01eec3a4cf38d72eaec3f915a9e.log",
+    ".calkit/runs/2025-07-16T16-12-09-8636b62c88e849068ac3f70ea15a2e5e.json",
+    ".calkit/systems/b2890a1644e28aecbd9762e4a1e124fe0b91f103.json"
+  ],
+  "dvc_status_before": {
+    "_check-env-my-conda-env": [
+      "always changed"
+    ],
+    "_check-env-ubuntu": [
+      "always changed"
+    ],
+    "_check-env-my-uv": [
+      "always changed"
+    ],
+    "_check-env-uv-venv": [
+      "always changed"
+    ],
+    "_check-env-openfoam": [
+      "always changed"
+    ],
+    "_check-env-my-venv": [
+      "always changed"
+    ]
+  },
+  "dvc_data_status_before": {
+    "not_in_cache": [],
+    "not_in_remote": [],
+    "committed": {},
+    "uncommitted": {},
+    "untracked": [],
+    "unchanged": []
+  },
+  "dvc_status_after": {
+    "_check-env-my-conda-env": [
+      "always changed"
+    ],
+    "_check-env-ubuntu": [
+      "always changed"
+    ],
+    "_check-env-my-uv": [
+      "always changed"
+    ],
+    "_check-env-uv-venv": [
+      "always changed"
+    ],
+    "_check-env-openfoam": [
+      "always changed"
+    ],
+    "_check-env-my-venv": [
+      "always changed"
+    ]
+  },
+  "dvc_data_status_after": {
+    "not_in_cache": [],
+    "not_in_remote": [],
+    "committed": {},
+    "uncommitted": {},
+    "untracked": [],
+    "unchanged": []
+  }
+}
