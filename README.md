@@ -1,7 +1,7 @@
 # Calkit multi-env example
 
 This repo shows how to use multiple environment types in a Calkit project.
-To run the pipeline, simply call
+To run the pipeline, simply call:
 
 ```sh
 calkit run
@@ -12,7 +12,7 @@ all in their own environment.
 One will use Pixi, another will use Conda, another uv,
 another a uv venv (rather than project,)
 another an alternative Pixi environment, and another Docker.
-See `dvc.yaml` for details.
+See `calkit.yaml` for details.
 
 ## Why would I ever want to do this?
 

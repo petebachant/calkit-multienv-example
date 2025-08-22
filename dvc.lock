@@ -74,7 +74,7 @@ stages:
     deps:
     - path: .calkit/env-locks/openfoam.json
       hash: md5
-      md5: 4210fd42d8e75753bfba9a440285cbde
+      md5: f534f7985c9133a93c78fda44ccf1ceb
       size: 1488
     outs:
     - path: results/openfoam.txt
@@ -147,7 +147,7 @@ stages:
     outs:
     - path: .calkit/env-locks/openfoam.json
       hash: md5
-      md5: 4210fd42d8e75753bfba9a440285cbde
+      md5: f534f7985c9133a93c78fda44ccf1ceb
       size: 1488
   _check-env-my-venv:
     cmd: calkit check environment --name my-venv
