@@ -2,7 +2,7 @@
 
 This repo shows how to use multiple environment types in a
 [Calkit](https://github.com/calkit/calkit.git) project,
-demonstrating how interacting with them is similar,
+demonstrating how interacting with them is similar irrespective of their type,
 and that there are no "create and mutate" steps--simply define and use
 an environment.
 
