@@ -22,6 +22,7 @@ environments:
     kind: uv-venv
     path: requirements.txt
     prefix: .venv2
+    python: "3.13"
   pixi2:
     kind: pixi
     path: pixi.toml
