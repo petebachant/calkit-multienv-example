@@ -4,10 +4,11 @@ stages:
     cmd: calkit xenv -n my-conda-env --no-check -- bash --noprofile --norc -c 
       "which python > results/conda.txt"
     deps:
-    - path: .calkit/env-locks/my-conda-env.yml
+    - path: .calkit/env-locks/my-conda-env
       hash: md5
-      md5: ebc232ac884fe872d1528d38da35045f
+      md5: 0974e17a41976eb5404e59d548f15843.dir
       size: 874
+      nfiles: 1
     outs:
     - path: results/conda.txt
       hash: md5
@@ -25,10 +26,11 @@ stages:
     cmd: calkit xenv -n ubuntu --no-check -- bash --noprofile --norc -c "cat 
       /etc/lsb-release > results/ubuntu.txt"
     deps:
-    - path: .calkit/env-locks/ubuntu.json
+    - path: .calkit/env-locks/ubuntu
       hash: md5
-      md5: 683e99f4eafda03c0843d1d64c26287f
-      size: 450
+      md5: 6a726a72351dad4bebe5d3f0c9c9e9e2.dir
+      size: 421
+      nfiles: 1
     outs:
     - path: results/ubuntu.txt
       hash: md5
@@ -51,10 +53,11 @@ stages:
     cmd: calkit xenv -n uv-venv --no-check -- bash --noprofile --norc -c "which 
       python > results/uv-venv.txt"
     deps:
-    - path: .calkit/env-locks/uv-venv.txt
+    - path: .calkit/env-locks/uv-venv
       hash: md5
-      md5: 569002c7f03bf600b2ca5c4d3165cc53
+      md5: 7b8cb892b29e68297a298a7ac7081ba6.dir
       size: 143
+      nfiles: 1
     outs:
     - path: results/uv-venv.txt
       hash: md5
@@ -72,10 +75,11 @@ stages:
     cmd: calkit xenv -n openfoam --no-check -- bash --noprofile --norc -c 
       "icoFoam -help > results/openfoam.txt"
     deps:
-    - path: .calkit/env-locks/openfoam.json
+    - path: .calkit/env-locks/openfoam
       hash: md5
-      md5: f534f7985c9133a93c78fda44ccf1ceb
-      size: 1488
+      md5: d0ec624a8c2bf9d7cb1df5af203391c0.dir
+      size: 1458
+      nfiles: 1
     outs:
     - path: results/openfoam.txt
       hash: md5
@@ -85,10 +89,11 @@ stages:
     cmd: calkit xenv -n my-venv --no-check -- bash --noprofile --norc -c "python
       -c \"import polars; print(polars.__version__)\" > results/venv.txt"
     deps:
-    - path: .calkit/env-locks/my-venv.txt
+    - path: .calkit/env-locks/my-venv
       hash: md5
-      md5: 4d1e252c899d43562a7f13d42d405b60
+      md5: be5d82515cdafbdccf22415962d0abda.dir
       size: 15
+      nfiles: 1
     outs:
     - path: results/venv.txt
       hash: md5

@@ -1,13 +1,12 @@
 {
     "RepoTags": [
-        "ubuntu:latest"
+        "ubuntu"
     ],
     "RepoDigests": [
         "ubuntu@sha256:c4570d2f4665d5d118ae29fb494dee4f8db8fcfaee0e37a2e19b827f399070d3"
     ],
     "Architecture": "arm64",
     "Os": "linux",
-    "Size": 28869774,
     "RootFS": {
         "Type": "layers",
         "Layers": [

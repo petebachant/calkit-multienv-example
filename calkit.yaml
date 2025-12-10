@@ -79,7 +79,7 @@ pipeline:
           storage: git
     my-pixi-env-command:
       kind: shell-command
-      command: python -c \"import plotly; print(plotly.__file__)\" > results/pixi2.txt
+      command: python -c "import plotly; print(plotly.__file__)" > results/pixi2.txt
       environment: pixi2
       outputs:
         - path: results/pixi2.txt
@@ -93,7 +93,7 @@ pipeline:
           storage: git
     my-venv-command:
       kind: shell-command
-      command: python -c \"import polars; print(polars.__version__)\" > results/venv.txt
+      command: python -c "import polars; print(polars.__version__)" > results/venv.txt
       environment: my-venv
       outputs:
         - path: results/venv.txt
