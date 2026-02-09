@@ -41,6 +41,9 @@ environments:
     kind: uv-venv
     prefix: .venv
     python: "3.12"
+  uv2:
+    kind: uv
+    path: .calkit/envs/uv2/pyproject.toml
 pipeline:
   stages:
     my-conda-command:
