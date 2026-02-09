@@ -102,3 +102,10 @@ pipeline:
       outputs:
         - path: results/venv.txt
           storage: git
+    my-uv2-command:
+      kind: shell-command
+      command: which python > results/uv2.txt
+      environment: uv2
+      outputs:
+        - path: results/uv2.txt
+          storage: git
