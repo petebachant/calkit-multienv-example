@@ -39,7 +39,7 @@ environments:
   tf:
     path: reqs-tf.txt
     kind: uv-venv
-    prefix: .venv
+    prefix: .calkit/envs/tf/.venv
     python: "3.12"
   uv2:
     kind: uv
