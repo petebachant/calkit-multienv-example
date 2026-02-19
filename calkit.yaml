@@ -112,3 +112,10 @@ pipeline:
       outputs:
         - path: results/uv2.txt
           storage: git
+    my-r-script:
+      kind: r-script
+      script_path: scripts/my-script.R
+      environment: r
+      outputs:
+        - path: results/r.txt
+          storage: git

@@ -77,7 +77,7 @@ stages:
     deps:
     - path: .calkit/env-locks/openfoam
       hash: md5
-      md5: d216ba3901a91c04ad9b43fd6af03bf1.dir
+      md5: 82f25c59b223a40aaab37a80047c6e4f.dir
       size: 1458
       nfiles: 1
     outs:
@@ -191,3 +191,19 @@ stages:
       hash: md5
       md5: d04657243894fff33aa4604192241520
       size: 77
+  my-r-script:
+    cmd: calkit xenv -n r -- Rscript scripts/my-script.R
+    deps:
+    - path: .calkit/envs/r/renv.lock
+      hash: md5
+      md5: 11706756f13af816db8c45c6bc9d6ea4
+      size: 54003
+    - path: scripts/my-script.R
+      hash: md5
+      md5: 3dae4f3419ae4db7698c724c4d056c2a
+      size: 598
+    outs:
+    - path: results/r.txt
+      hash: md5
+      md5: 1a5940274d5cc6d38b24af7abc9597a4
+      size: 103

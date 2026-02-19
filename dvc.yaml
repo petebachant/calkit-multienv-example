@@ -96,3 +96,14 @@ stages:
           persist: false
     desc: Automatically generated from the 'my-uv2-command' stage in calkit.yaml.
       Changes made here will be overwritten.
+  my-r-script:
+    cmd: calkit xenv -n r -- Rscript scripts/my-script.R
+    deps:
+      - scripts/my-script.R
+      - .calkit/envs/r/renv.lock
+    outs:
+      - results/r.txt:
+          cache: false
+          persist: false
+    desc: Automatically generated from the 'my-r-script' stage in calkit.yaml.
+      Changes made here will be overwritten.
