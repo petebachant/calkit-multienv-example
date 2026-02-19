@@ -1,0 +1,4 @@
+Package: CalkitProject
+Version: 0.0.1
+Title: Auto-generated R environment
+Imports: tidyverse

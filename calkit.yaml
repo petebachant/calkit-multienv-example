@@ -44,6 +44,9 @@ environments:
   uv2:
     kind: uv
     path: .calkit/envs/uv2/pyproject.toml
+  r:
+    kind: renv
+    path: .calkit/envs/r/DESCRIPTION
 pipeline:
   stages:
     my-conda-command:
